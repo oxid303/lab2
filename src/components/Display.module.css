@@ -1,0 +1,13 @@
+.display {
+  margin: 0 auto;
+  width: 40%;
+  height: 100px;
+}
+
+.red {
+  background-color: rgb(255, 59, 59);
+}
+
+.green {
+  background-color: rgb(69, 255, 109);
+}
