@@ -4,11 +4,9 @@
   width: 500px;
 
   grid-template-areas:
-    "d b i"
-    "p p p";
+    "d b i";
 
   grid-template-columns: 84px 1fr 84px;
-  grid-template-rows: 70px 100px;
   grid-gap: 10px;
 }
 
@@ -22,8 +20,4 @@
 
 .increment{
   grid-area: i;
-}
-
-.display{
-  grid-area: p;
 }

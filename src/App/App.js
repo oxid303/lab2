@@ -23,42 +23,17 @@ const theme = createMuiTheme({
 });
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      counter: 0
-    };
-  }
-
-  decrement() {
-    this.setState({
-      counter: this.state.counter -1
-    })
-  }
-
-  increment() {
-    this.setState({
-      counter: this.state.counter + 1
-    })
-  }
-
-  resetCounter() {
-    this.setState({
-      counter: 0
-    })
-  }
-
   render() {
     return (
       <div className={s.wrapper}>
         <div className={s.decrement}>
-          <Decrement theme={theme} decrement={this.decrement.bind(this)} />
+          <Decrement theme={theme} dispatch={this.props.dispatch} />
         </div>
         <div className={s.button}>
-          <Counter theme={theme} counter={this.state.counter} resetCounter={this.resetCounter.bind(this)} />
+          <Counter theme={theme} state={this.props.state} dispatch={this.props.dispatch} />
         </div>
         <div className={s.increment}>
-          <Increment theme={theme} increment={this.increment.bind(this)} />
+          <Increment theme={theme} dispatch={this.props.dispatch} />
         </div>
       </div>
     );
