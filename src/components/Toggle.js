@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import s from './Toggle.module.css';
+// import s from './Toggle.module.css';
+import MyButton from './MyButton/MyButton';
 
 class Toggle extends Component {
   constructor(props) {
@@ -12,8 +13,8 @@ class Toggle extends Component {
       this.props.changeColor();
     };
     return (
-      <div>
-        <button className={s.button} onClick={buttonChangeColor} >Toggle</button>
+      <div onClick={buttonChangeColor}>
+        <MyButton />
       </div>
     );
   }
