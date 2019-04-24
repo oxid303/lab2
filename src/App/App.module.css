@@ -1,0 +1,29 @@
+.wrapper{
+  margin: 15px auto;
+  display: grid;
+  width: 500px;
+
+  grid-template-areas:
+    "d b i"
+    "p p p";
+
+  grid-template-columns: 84px 1fr 84px;
+  grid-template-rows: 70px 100px;
+  grid-gap: 10px;
+}
+
+.decrement{
+  grid-area: d;
+}
+
+.button{
+  grid-area: b;
+}
+
+.increment{
+  grid-area: i;
+}
+
+.display{
+  grid-area: p;
+}
