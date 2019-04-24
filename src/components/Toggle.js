@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
 import s from './Toggle.module.css';
 
-const Toggle = (props) => {
-  let buttonChangeColor = () => {
-    props.state.changeColor();
-  };
+class Toggle extends Component {
+  constructor(props) {
+    super(props);
+    props = this.props;
+  }
 
-  return (
-    <div>
-      <button className={s.button} onClick={buttonChangeColor} >Toggle</button>
-    </div>
-  );
+  render() {
+    let buttonChangeColor = () => {
+      this.props.changeColor();
+    };
+    return (
+      <div>
+        <button className={s.button} onClick={buttonChangeColor} >Toggle</button>
+      </div>
+    );
+  }
 };
 
 export default Toggle;
