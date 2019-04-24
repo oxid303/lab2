@@ -3,18 +3,11 @@ import React, { Component } from 'react';
 import MyButton from './MyButton/MyButton';
 
 class Toggle extends Component {
-  constructor(props) {
-    super(props);
-    props = this.props;
-  }
 
   render() {
-    let buttonChangeColor = () => {
-      this.props.changeColor();
-    };
     return (
-      <div onClick={buttonChangeColor}>
-        <MyButton />
+      <div>
+        <MyButton changeColor={this.props.changeColor} />
       </div>
     );
   }

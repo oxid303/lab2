@@ -21,7 +21,7 @@ const theme = createMuiTheme({
   }
 });
 
-const styles = theme => ({
+const styles = () => ({
   button: {
     display: 'block',
     margin: '100px auto 10px auto',
@@ -38,7 +38,7 @@ function MyButton(props) {
   const { classes } = props;
   return (
     <MuiThemeProvider theme={theme}>
-      <Button variant="contained" color="primary" className={classes.button}>
+      <Button variant="contained" color="primary" className={classes.button} onClick={props.changeColor}>
         Toggle
       </Button>
     </MuiThemeProvider>
