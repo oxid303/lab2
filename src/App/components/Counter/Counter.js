@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
 import { MuiThemeProvider } from '@material-ui/core/styles';
 import Tooltip from '@material-ui/core/Tooltip';
-import { resetCounterAC } from '../Redux/CounterReducer';
 
 const styles = () => ({
   button: {
@@ -19,13 +18,13 @@ const styles = () => ({
   }
 });
 
-class MyButton extends Component {
+class MyButton extends React.Component {
   render() {
     return (
       <MuiThemeProvider theme={this.props.theme}>
         <Tooltip disableHoverListener title="Counter was reset">
           <Button variant="contained" color="primary"
-            className={this.props.classes.button} onClick={() => this.props.dispatch(resetCounterAC())}>
+            className={this.props.classes.button} onClick={() => this.props.resetCounter()}>
             Count: {this.props.state.counterReducer.counter},&nbsp;
             <span className={this.props.classes.lowFontSize}>click to reset</span>
           </Button>

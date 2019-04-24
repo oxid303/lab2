@@ -27,6 +27,9 @@ const counterReducer = (state = initialState, action) => {
       break;
   };
 
+  console.log(state.counter);
+  
+
   return state;
 }
 
